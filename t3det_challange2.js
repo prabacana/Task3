@@ -6,23 +6,34 @@ let break_section = "===========================================================
 
 let break_string = "========================================STRING========================================";
 
-let name = "Bayu Aji Pamungkas";
+function mutationName(name) {
+    let mutation_upper = name.toUpperCase();
+    let mutation_lower = name.toLowerCase();
+    let mutation_firstChar = name.substring(0, 1);
+    let mutation_sliceChar = name.slice(0, 4);
+    let mutation_merging = name + " Love Javascript";
 
-let mutation_upper = name.toUpperCase();
-let mutation_lower = name.toLowerCase();
-let mutation_firstChar = name.substring(0,1);
-let mutation_sliceChar = name.slice(0,4);
-let mutation_merging = name + " Love Javascript";
+    return {
+        mutation_upper,
+        mutation_lower,
+        mutation_firstChar,
+        mutation_sliceChar,
+        mutation_merging
+    };
+}
+
+let baseName = "Bayu Aji Pamungkas";
+let mutationResult = mutationName(baseName);
 
 console.log(break_void);
 console.log(break_string);
-console.log(name + " ===> Base value");
-console.log(name.length + " ===> Length");
-console.log(mutation_upper + " ===> To upper");
-console.log(mutation_lower + " ===> To lower");
-console.log(mutation_firstChar + " ===> Taking first character");
-console.log(mutation_sliceChar + " ===> Slicing character");
-console.log(mutation_merging + " ===> Adding string");
+console.log(originName + " ===> Base value");
+console.log(mutationResult.length + " ===> Length");
+console.log(mutationResult.mutation_upper + " ===> To upper");
+console.log(mutationResult.mutation_lower + " ===> To lower");
+console.log(mutationResult.mutation_firstChar + " ===> Taking first character");
+console.log(mutationResult.mutation_sliceChar + " ===> Slicing character");
+console.log(mutationResult.mutation_merging + " ===> Adding string");
 console.log(break_section);
 console.log(break_void);
 
