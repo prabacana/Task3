@@ -162,33 +162,24 @@ console.log(break_void);
 
 let break_average =  "=======================================AVERAGE========================================";
 
-let num_array = [5, 8, 2];
-
-let sum = 0;
-for (let i = 0; i < num_array.length; i++) {
-    sum += num_array[i];
-}
-
-let average = sum / num_array.length;
-
-function calculateAverage(numbers) {
+function op_average(number) {
     let sum = 0;
-    for (let i = 0; i < numbers.length; i++) {
-        sum += numbers[i];
+    for (let i = 0; i < number.length; i++) {
+        sum += number[i];
     }
     
-    let average = sum / numbers.length;
+    let average = sum / number.length;
     
     return average;
 }
 
 let num_array = [5, 8, 2];
 
-let average = calculateAverage(num_array);
+let result_average = op_average(num_array);
 
 console.log(break_void);
 console.log(break_average);
-console.log("( " + num_array[0] + " + " +num_array[1] + " + " + num_array[2] + " )" + " / " + num_array.length + " = " + average + " ===> Average array");
+console.log("( " + num_array[0] + " + " +num_array[1] + " + " + num_array[2] + " )" + " / " + num_array.length + " = " + result_average + " ===> Average array");
 console.log(break_section);
 console.log(break_void);
 
@@ -197,15 +188,20 @@ console.log(break_void);
 
 let break_odd_even = "====================================ODD AND EVEN======================================";
 
-let num7 = 7
+function op_oddEven(number) {
+    if (number % 2 === 0) {
+        return "Even number.";
+    } else {
+        return "Odd number.";
+    }
+}
+
+let num7 = 7;
+let result_oddEven = op_oddEven(num7);
 
 console.log(break_void);
 console.log(break_odd_even);
-if (num7 % 2 === 0) {
-    console.log(num7 + " ===> Even number.");
-} else {
-    console.log(num7 + " ===> Odd number.");
-}
+console.log(num7 + " ===> " + result_oddEven);
 console.log(break_section);
 console.log(break_void);
 
@@ -214,14 +210,62 @@ console.log(break_void);
 
 let break_rand = "=======================================RANDOM=========================================";
 
-let num_rand_min = 1
-let num_rand_max = 5
-let num_rand = Math.random() * (num_rand_max - num_rand_min) + num_rand_min;
+function op_randNum(min, max) {
+    return Math.random() * (max - min) + min;
+}
 
+let num_rand_min = 1;
+let num_rand_max = 5;
+
+let num_rand = op_randNum(num_rand_min, num_rand_max);
 
 console.log(break_void);
 console.log(break_rand);
 console.log(num_rand + " ===> Random number");
+console.log(break_section);
+console.log(break_void);
+
+
+//Temperature conversion
+
+let break_temperature = "====================================TEMPERATURE=======================================";
+
+function op_temperature(tempCel) {
+    let tempFar = (tempCel * 9/5) + 32;
+    return tempFar;
+}
+
+let celcius = 32;
+let fahrenheit = op_temperature(celcius);
+
+console.log(break_void);
+console.log(break_temperature);
+console.log(celcius + " °C ===> " + fahrenheit + " °F");
+console.log(break_section);
+console.log(break_void);
+
+
+//Exponent already exist in challange before this, and I already change it using function
+//So I think there's no need to create another exponent
+//I am sorry I can't confirm this to Facilitator because these 3 days I am busy with training from office until night
+//I am reluctant to contact at night since it would be rude
+
+
+//Vocal alphabet detection
+
+let break_vocalDet = "===================================VOCAL DETECTION====================================";
+
+function op_vocalDet(character) {
+    let vocalSync = character.toLowerCase();
+    return vocalSync === "a" || vocalSync === "e" || vocalSync === "i" || vocalSync === "o" || vocalSync === "u";
+}
+
+let vocalChar = "B";
+let vocal = op_vocalDet(vocalChar) ? "===> Vowel" : "===> Not a vowel";
+
+console.log(break_void);
+console.log(break_vocalDet);
+console.log(vocalChar + " " + vocal);
 console.log(break_section);
 console.log(break_void);
 
