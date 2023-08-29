@@ -59,9 +59,9 @@ let mutatedBio = mutationBio(age, height);
 console.log(break_void);
 console.log(break_string2);
 console.log(age + " " + typeof age + " ===> Base value");
-console.log(mutatedBio.mutationToNumber + " " + typeof mutationToNumber + " ===> Change type to number");
+console.log(mutatedBio.mutationToNumber + " " + typeof mutatedBio.mutationToNumber + " ===> Change type to number");
 console.log(height + " " + typeof height + " ===> Base value");
-console.log(mutatedBio.mutationToFloat + " "  + typeof mutationToFloat + " ===> Change type to float");
+console.log(mutatedBio.mutationToFloat + " "  + typeof mutatedBio.mutationToFloat + " ===> Change type to float");
 console.log(break_section);
 console.log(break_void);
 
@@ -70,11 +70,16 @@ console.log(break_void);
 
 let break_type = "===================================DATA TYPE CHECK====================================";
 
-let paradox = undefined;
-
 console.log(break_void);
 console.log(break_type);
-console.log(typeof paradox + " ===> Data type");
+
+function check_dataType(paradox){
+    console.log(typeof paradox + " ===> Data type");
+}
+
+let data = undefined;
+check_dataType(data);
+
 console.log(break_section);
 console.log(break_void);
 
@@ -83,34 +88,52 @@ console.log(break_void);
 
 let break_addition_subtraction = "===============================ADDITION AND SUBTRACTION===============================";
 
+function op_addSub(num1, num2) {
+    let addition = num1 + num2;
+    let subtraction = num1 - num2;
+
+    return {
+        addResult: addition,
+        subResult: subtraction
+    };
+}
+
 let num1 = 10;
 let num2 = 5;
 
-let addition = num1 + num2;
-let subtraction = num1 - num2;
+let result_addSub = op_addSub(num1, num2);
 
 console.log(break_void);
 console.log(break_addition_subtraction);
-console.log(num1 + " " + "+" + " " + num2 + " " + "=" + " " + addition + " ===> Addition");
-console.log(num1 + " " + "-" + " " + num2 + " " + "=" + " " + subtraction + " ===> Subtraction");
+console.log(num1 + " " + "+" + " " + num2 + " " + "=" + " " + result_addSub.addResult + " ===> Addition");
+console.log(num1 + " " + "-" + " " + num2 + " " + "=" + " " + result_addSub.subResult + " ===> Subtraction");
 console.log(break_section);
 console.log(break_void);
 
 
 //Multiplication and division
 
-let break_multiplicaiton_division = "==============================MULTIPLICATION AND DIVTSION=============================";
+let break_multiplication_division = "==============================MULTIPLICATION AND DIVTSION=============================";
 
-let num3 = 6
-let num4 = 2
+function op_mutDiv(num3, num4) {
+    let multiplication = num3 * num4;
+    let division = num3 / num4;
 
-let multiplication = num3 * num4
-let division = num3 / num4
+    return {
+        multResult: multiplication,
+        divResult: division
+    };
+}
+
+let num3 = 6;
+let num4 = 2;
+
+let result_multDiv = op_mutDiv(num3, num4);
 
 console.log(break_void);
-console.log(break_multiplicaiton_division);
-console.log(num3 + " " + "*" + " " + num4 + " " + "=" + " " + multiplication + " ===> Multiplication");
-console.log(num3 + " " + "/" + " " + num4 + " " + "=" + " " + division + " ===> Division");
+console.log(break_multiplication_division);
+console.log(num3 + " " + "*" + " " + num4 + " " + "=" + " " + result_multDiv.multResult + " ===> Multiplication");
+console.log(num3 + " " + "/" + " " + num4 + " " + "=" + " " + result_multDiv.divResult + " ===> Division");
 console.log(break_section);
 console.log(break_void);
 
@@ -119,14 +142,18 @@ console.log(break_void);
 
 let break_exponent = "=======================================EXPONENT=======================================";
 
-let num5 = 3
-let num6 = 4
+function op_exponent(base_number, exponent_number) {
+    return Math.pow(base_number, exponent_number);
+}
 
-let exponent = Math.pow(num5,num6);
+let num5 = 3;
+let num6 = 4;
+
+let result_expo = op_exponent(num5, num6);
 
 console.log(break_void);
 console.log(break_exponent);
-console.log(num5 + " " + "to the power of " + num6 + " is " + exponent + " ===> Exponent");
+console.log(num5 + " " + "to the power of " + num6 + " is " + result_expo + " ===> Exponent");
 console.log(break_section);
 console.log(break_void);
 
@@ -143,6 +170,21 @@ for (let i = 0; i < num_array.length; i++) {
 }
 
 let average = sum / num_array.length;
+
+function calculateAverage(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    
+    let average = sum / numbers.length;
+    
+    return average;
+}
+
+let num_array = [5, 8, 2];
+
+let average = calculateAverage(num_array);
 
 console.log(break_void);
 console.log(break_average);
