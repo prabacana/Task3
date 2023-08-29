@@ -27,7 +27,7 @@ let mutationResult = mutationName(baseName);
 
 console.log(break_void);
 console.log(break_string);
-console.log(originName + " ===> Base value");
+console.log(baseName + " ===> Base value");
 console.log(mutationResult.length + " ===> Length");
 console.log(mutationResult.mutation_upper + " ===> To upper");
 console.log(mutationResult.mutation_lower + " ===> To lower");
@@ -42,18 +42,26 @@ console.log(break_void);
 
 let break_string2 = "=================================DATA MANIPULATION====================================";
 
-let age = "25";;
-let heigth = "175";
+function mutationBio(age, height){
+    let mutationToNumber = parseInt(age);
+    let mutationToFloat = parseFloat(height);
 
-let mutation_toNumber = parseInt(age);
-let mutation_toFloat = parseFloat(heigth);
+    return {
+        mutationToNumber,
+        mutationToFloat
+    }
+}
+
+let age = "25";
+let height ="175";
+let mutatedBio = mutationBio(age, height);
 
 console.log(break_void);
 console.log(break_string2);
 console.log(age + " " + typeof age + " ===> Base value");
-console.log(mutation_toNumber + " " + typeof mutation_toNumber + " ===> Change type to number");
-console.log(heigth + " " + typeof heigth + " ===> Base value");
-console.log(mutation_toFloat + " "  + typeof mutation_toFloat + " ===> Change type to float");
+console.log(mutatedBio.mutationToNumber + " " + typeof mutationToNumber + " ===> Change type to number");
+console.log(height + " " + typeof height + " ===> Base value");
+console.log(mutatedBio.mutationToFloat + " "  + typeof mutationToFloat + " ===> Change type to float");
 console.log(break_section);
 console.log(break_void);
 
