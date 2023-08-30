@@ -7,18 +7,26 @@ let break_section = "===========================================================
 let break_calculator = "======================================CALCULATOR======================================";
 
 function calculator_addition(number1, number2){
+    if (typeof number1 !== "number" || typeof number2 !== "number")
+        return "Error, inputted value mush be number"
     return number1 + number2
 }
 
 function calculator_subtraction(number1, number2){
+    if (typeof number1 !== "number" || typeof number2 !== "number")
+        return "Error, inputted value mush be number"
     return number1 - number2
 }
 
 function calculator_multiplication(number1, number2){
+    if (typeof number1 !== "number" || typeof number2 !== "number")
+        return "Error, inputted value mush be number"
     return number1 * number2
 }
 
 function calculator_division(number1, number2){
+    if (typeof number1 !== "number" || typeof number2 !== "number")
+        return "Error, inputted value mush be number"
     return number1 / number2
 }
 
