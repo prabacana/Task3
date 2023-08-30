@@ -1,4 +1,4 @@
-/*
+c/*
 
 STRING
 MANIPULASI STRING
@@ -60,3 +60,9 @@ RANDOM
 * 2. Konversi Celsius ke Fahrenheit: Buatlah sebuah fungsi yang menerima satu parameter berupa suhu dalam Celsius dan mengembalikan suhu dalam Fahrenheit. (Rumus: Fahrenheit = (Celsius * 9/5) + 32)
 * 3. Pangkat Sederhana: Buatlah sebuah function yang menerima dua parameter: base (angka dasar) dan exponent (pangkat). Fungsi ini akan mengembalikan hasil dari base dipangkatkan exponent.
 * 4. Cek Huruf Vokal: Buatlah sebuah fungsi yang menerima satu parameter berupa huruf (string dengan panjang 1) dan mengembalikan "Vokal" jika huruf adalah vokal dan "Bukan Vokal" jika huruf bukan vokal.
+
+
+
+
+1. Mmebuat function calculator
+ 2. Buatkan soal sebelumnya dengan function declaration dan expression
