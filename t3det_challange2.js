@@ -257,7 +257,7 @@ let break_vocalDet = "===================================VOCAL DETECTION========
 
 function op_vocalDet(character) {
     let vocalSync = character.toLowerCase();
-    return vocalSync === "a" || vocalSync === "e" || vocalSync === "i" || vocalSync === "o" || vocalSync === "u";
+    return vocalSync === "a" || vocalSync === "i" || vocalSync === "u" || vocalSync === "e" || vocalSync === "o";
 }
 
 let vocalChar = "B";
