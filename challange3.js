@@ -6,44 +6,32 @@ let break_section = "===========================================================
 
 let break_calculator = "======================================CALCULATOR======================================";
 
-function calculator_addition(number1, number2){
-    if (typeof number1 !== "number" || typeof number2 !== "number")
-        return "Error, inputted value mush be number"
-    return number1 + number2
+let input1 = 10;
+let input2 = 5;
+let operation = "+"
+
+function calculator(input1, input2, operation) {
+    if (typeof input1 !== "number" || typeof input2 !== "number") {
+        return "Input not accepted, please input a number"
+    }
+
+    if (operation == "+") {
+        return input1 + input2
+    } else if (operation == "-") {
+        return input1 - input2
+    } else if (operation == "/") {
+        return input1 / input2
+    } else if (operation == "*") {
+        return input1 * input2
+    }
 }
 
-function calculator_subtraction(number1, number2){
-    if (typeof number1 !== "number" || typeof number2 !== "number")
-        return "Error, inputted value mush be number"
-    return number1 - number2
-}
+let calculator_result = calculator(input1, input2, operation);
 
-function calculator_multiplication(number1, number2){
-    if (typeof number1 !== "number" || typeof number2 !== "number")
-        return "Error, inputted value mush be number"
-    return number1 * number2
-}
-
-function calculator_division(number1, number2){
-    if (typeof number1 !== "number" || typeof number2 !== "number")
-        return "Error, inputted value mush be number"
-    return number1 / number2
-}
-
-let num1 = 10;
-let num2 = 5;
-
-let additionResult = calculator_addition(num1, num2);
-let subtractionResult = calculator_subtraction(num1, num2); 
-let multiplicationResult = calculator_multiplication(num1, num2);
-let divisonResult = calculator_division(num1, num2);
 
 console.log(break_void);
 console.log(break_calculator);
-console.log(num1 + " + " + num2 + " = " + additionResult + " ===> Calculator addition");
-console.log(num1 + " - " + num2 + " = " + subtractionResult + " ===> Calculator subtraction");
-console.log(num1 + " * " + num2 + " = " + multiplicationResult + " ===> Calculator multiplication");
-console.log(num1 + " / " + num2 + " = " + divisonResult + " ===> Calculator division")
+console.log(input1 + " " + operation + " " + input2 + " = " + calculator_result + " ===> Calculator result");
 console.log(break_section);
 console.log(break_void);
 
