@@ -1,3 +1,3 @@
 
-1. Mmebuat function calculator
- 2. Buatkan soal sebelumnya dengan function declaration dan expression
+1. rubah function calculator ke arrow
+2. rubah function celcius ke arrow dan currying
